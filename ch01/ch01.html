@@ -1,0 +1,104 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <script>
+      let a = 10;
+      a = 10; //가능
+      //let a = 10; 불가능
+      
+      const b = 10;
+      //b = 10; 불가능
+
+      let age;
+      console.log(age); //undefined 
+      //null 존재하지 않음, 값이 없음
+      //undefined 선언은 되었지만 할당은 되지 않았다
+
+      var x = 124;
+      console.log(typeof(x)); //number
+      x = "aaa";
+      console.log(typeof(x)); //string
+      x = {age:13}
+      console.log(typeof(x)); //object
+
+      if(typeof(x) === "object"){
+         console.log("일치");
+      }
+
+      console.log("\n");
+      
+      console.log(String("12")); //12
+      console.log(String('12')); //12
+      console.log(String('ab')); //ab
+      console.log(String("ab")); //ab
+      console.log(String('0')); //0
+      console.log(String(0)); //0
+      console.log(String(15)); //15
+      console.log(String('')); //빈칸출력
+      console.log(String(' ')); //빈칸출력
+      console.log(String(null)); //null
+      console.log(String(undefined)); //undefined
+
+      console.log("\n");
+
+      console.log(Number("12")); //12
+      console.log(Number('12')); //12
+      console.log(Number('ab')); //NaN
+      console.log(Number("ab")); //NaN
+      console.log(Number('0')); //0
+      console.log(Number(0)); //0
+      console.log(Number(15)); //15
+      console.log(Number('')); //0
+      console.log(Number(' ')); //0
+      console.log(Number(null)); //0
+      console.log(Number(undefined)); //NaN
+
+      console.log("\n");
+
+      console.log("1 Boolean : "+Boolean(0)) //false
+      console.log("2 Boolean : "+Boolean(NaN)) //false
+      console.log("3 Boolean : "+Boolean("")) //false
+      console.log("4 Boolean : "+Boolean('')); //false
+      console.log("5 Boolean : "+Boolean(" ")) //true
+      console.log("6 Boolean : "+Boolean(' ')); //true
+      console.log("7 Boolean : "+Boolean( )); //false
+      console.log("8 Boolean : "+Boolean(undefined)) //false
+      
+      console.log("\n");
+
+      let a1 = 5;
+      let a2 = "5";
+      console.log(a1 == a2); //true, == 값 비교
+      console.log(a1 === a2); //false, === 타입까지 비교
+
+      let msg = "hello";
+      function sayHello(name){
+         if(name){
+            msg += name;
+            console.log("${name}:"+`${name}`);
+            console.log("name:"+name);
+         }
+
+         console.log("함수 내부");
+         console.log(msg);
+      }
+
+      function sayHello2(name){
+         if(""){
+            console.log("1111111111111111");
+         }
+      }
+
+      sayHello2("sd");
+   </script>
+</head>
+
+<body>
+   <button id="buttonB">press me</button>
+   <h3 id="heading_B"></h3>
+</body>
+</html>
