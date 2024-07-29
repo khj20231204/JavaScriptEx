@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+
+   <script>
+
+      var evens = [2,4,6,8];
+
+      var a = [2,,4];
+      console.log(a);
+
+      var evens = new Array(2,4,6,8);
+      var empty = new Array();
+      var a = new Array(2,4);
+      var various = new Array(3.14, "pi", true, {x:1, y:2}, [2,4,6,8]);
+       
+      var e = new Array(3,4,5);
+      var e1 = new Array(345,35);
+      console.log(e[1]);
+
+      var a = ["A","B","C"];
+      a.push("D");
+      console.log(a);   
+
+      delete a[2];
+      console.log(a);   
+
+      for(var i in a){
+         console.log(i);
+         console.log(a[i])
+      } 
+
+      console.log(a.hasOwnProperty("2"));
+
+      var b = ["A",,"C"];
+      for(var i in b) console.log(i);  
+
+      console.log(b.hasOwnProperty("1")); //false
+      console.log(b.hasOwnProperty("A")); //true
+
+      var msg = new String("Everything is practice");
+
+      console.log("substring:"+msg.substring(2, 5));  //2~4까지 자르기
+      console.log("slice:"+msg.slice(-3));            //마지막 끝에서
+      console.log("indexOf:"+msg.indexOf("t"));
+      console.log("indexOf:"+msg.indexOf("i", 10));
+      console.log("lastIndexOf:"+msg.lastIndexOf("t"));
+      console.log("split:"+msg.split(" "));
+      console.log("replace:"+msg.replace("i", "I"));
+      console.log("toUpperCase:"+msg.toUpperCase());
+      console.log("endsWith:"+msg.endsWith("."));
+      
+   </script>
+</head>
+<body>
+   
+</body>
+</html>
