@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+
+   <script>
+      // 중첩 함수
+      function square(t){
+         var tot = sum();
+         console.log("tot:"+tot);
+
+         function sum(){
+            console.log(t);
+            var tot = 0;
+            for(var i=0 ; i<t.length ; i++){
+              tot += t[i]*t[i]
+            }
+            return tot;
+         }
+      }
+
+      let array = [1,2,3];
+      squer(array);
+   </script>
+</head>
+<body>
+   <!-- <button onClick="squer(4)">버튼</button> -->
+   <button id="button1">버튼1</button>
+   <p id = "est">hello</p>
+
+</body>
+</html>
