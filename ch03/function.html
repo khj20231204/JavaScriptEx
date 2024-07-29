@@ -22,7 +22,24 @@
       }
 
       let array = [1,2,3];
-      squer(array);
+      square(array);
+
+      var f = function(){
+         console.log("즉시 실행");
+      }
+      
+      f();
+
+      (function(){console.log("즉시 실행2")})();
+
+      (function(){console.log("즉시 실행3")}());
+
+      (function(a,b){console.log(a+b)})(4,5);
+
+      var x = (function(){ console.log("변수 할당")})();
+
+      console.log(x);
+
    </script>
 </head>
 <body>
