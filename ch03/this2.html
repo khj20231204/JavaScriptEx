@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+
+   <script>
+      /*
+      var a = 10;
+      var b = {
+         a : 20,
+         c : function d(){
+            console.log("c a:" + a);            //10
+            console.log("c this.a:"+this.a);    //20
+
+            function e(){
+               console.log("e a:" + a);         //10
+               console.log("e this.a:"+this.a); //10
+            }
+
+            e();  //e()의 this는 e를 호출한 전역 객체
+
+            var v = () => {
+               console.log("v a:" + a);         //10
+               console.log("v this.a:"+this.a); //20
+            }
+
+            v();
+         }
+      }
+      b.c();   //c()의 this는 c를 호출한 b
+
+      var a = 10;
+      var obj2 = {
+         a : 20,
+         b2 : function(){
+            console.log("b2:"+this.a);    //20 -----1)
+
+            function c(){
+               console.log("c:"+this.a);//10 -----2)
+            }
+
+            c.call(this);
+         }
+      }
+      obj2.b2();
+      */
+      function ex(x,y,z){
+         console.log(this.x,y,z);
+      }
+
+      var exB = {
+         bb : 'bbb'
+      }
+
+      ex.call(exB,1,2,3);
+      ex.apply(exB, [1,2,3]);
+      var c = ex.bind(exB);
+      c(1,2,3);
+
+      var d = ex.bind(exB,1,2);
+      d(3);
+   </script>
+</head>
+<body>
+   
+</body>
+</html>

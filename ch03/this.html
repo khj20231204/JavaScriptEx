@@ -46,10 +46,10 @@
       var obj2 = {
          a3 : 20,
          b : function(){
-            console.log("a3:"+this.a3);
+            console.log("b:"+this.a3);    //20
 
             function c3(){
-               console.log("c3:"+this.c3);
+               console.log("c3:"+this.a3);//10
             }
 
             c3();
@@ -57,6 +57,46 @@
       }
 
       obj2.b();
+
+      var a4 = 10;
+      var obj2 = {
+         a4 : 20,
+         b : function(){
+            var self = this;
+            console.log("b:"+this.a4);
+
+            function c(){
+               console.log("c:"+self.a4)
+            }
+
+            c();
+         }
+      }
+      obj2.b();
+
+      var a5 = 200;
+      var b5 = {
+         a5 : 300,
+         c5 : function(){
+            console.log("a5:"+ this.a5);
+
+            
+            var d5 = () => {
+               console.log("a5:"+ this.a5);
+            }
+
+            d5();
+         }
+      }
+
+      b5.c5();
+
+      var arrow2 = (x,y) => {
+         console.log("arrow");
+      }
+
+      arrow2();
+
    </script>
 </head>
 <body>
