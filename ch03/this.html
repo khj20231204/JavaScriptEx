@@ -41,6 +41,22 @@
       console.log(obj.name);
       obj['age'] = 20;   
       console.log(obj['age'])
+
+      var a3 = 10;
+      var obj2 = {
+         a3 : 20,
+         b : function(){
+            console.log("a3:"+this.a3);
+
+            function c3(){
+               console.log("c3:"+this.c3);
+            }
+
+            c3();
+         }
+      }
+
+      obj2.b();
    </script>
 </head>
 <body>
