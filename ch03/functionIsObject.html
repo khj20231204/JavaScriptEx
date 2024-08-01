@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+
+   <script>
+      
+      function f(f2, n){
+         return f2(n);
+      }
+
+      function sendA(n){
+         return n+1;
+      }
+
+      function sendB(n){
+         return n+10;
+      }
+
+      console.log(f(sendA,10));
+      console.log(f(sendB,10));      
+
+      function fun(mode){
+         var obj = {
+            'case1' : function(a,b,C){console.log("obj case1"); return a+b;},
+            'case2' : function(a,b,C){console.log("obj case2"); return a-b;}
+         }
+
+         var obj2 = {
+            'case1' : function(a,b,C){console.log("obj2 case1"); return a*b},
+            'case2' : function(a,b,C){console.log("obj2 case2"); return a/b}
+         }
+/*
+         var obj3 = {
+            'case1' : console.log("obj3 case1"),
+            'case2' : console.log("obj3 case2")
+         }*/
+
+         return obj2[mode];
+      }
+
+      console.log("----------- 1 -----------");
+      console.log(fun('case1')(2,6));
+      console.log("----------- 2 -----------");
+      console.log(fun('case2')(2,6));
+
+   </script>
+</head>
+<body>
+   
+</body>
+</html>

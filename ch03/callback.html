@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+
+   <script>
+      
+      var callback1 = () =>{        //화살표 함수
+         console.dir(this);
+      }
+
+      var callback2 = function(){   //일반 함수
+         console.dir(this);
+      }
+
+      var obj = {
+         a : 1,
+         b : function(cb){
+            console.log("obj");
+            cb.call(this);          //call로 this입력
+         }
+      };
+
+      obj.b(callback1);             //Window
+      obj.b(callback2);             //Object
+   //-----------------------------------
+      var callback2 = function(k){
+         return 4+k;
+      }
+
+      function callFunc(callback, n, m){
+         console.log(callback2(n+m));
+      }
+
+      callFunc(callback2,5,6);
+   //-----------------------------------
+      function f(){
+         console.log("fff");
+      }
+
+      function f2(f){
+         function f3(f){
+            console.log("f3");
+            f();
+         }
+         f3(f);
+      }
+
+      f2(f);
+
+      //-----------------------------------
+      function a(x,y,z){
+         console.log(this, x,y,z);
+      }
+
+      var b = {
+         bb: 'bbb'
+      };
+
+      a.call(b, 1,2,3);
+      a.apply(b, [1,2,3]); //apply 배열로 인수 전달
+
+      var v = a.bind(b);   //bind생성, bind는 생성과 호출을 따로
+      v(1,2,3);            //bind호출
+
+      var v2 = a.bind(b,1,2); //bind 일부 인수 고정
+      v2(3);
+   </script>
+
+</head>
+<body>
+   
+</body>
+</html>
