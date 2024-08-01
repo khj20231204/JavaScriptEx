@@ -10,10 +10,16 @@
       function Person(n,a){
          this.name = n;
          this.age = a;
+         console.log("Person:"+this);
       }
 
-      var roy = new Person('doll',12);
-      console.log(roy);
+      var roy = new Person('doll',12); //Person:[object Object] - this는 Person 자신
+      //new연산자를 사용하여 Person객체로 roy를 생성
+      console.log(roy);                //Object { name: "doll", age: 12 }
+
+      var roy2 = Person('doll2',44);   //Person:[object Window] - this는 Window객체
+      console.log(roy2);               //undefined
+      console.log(window.name, window.age);  //doll2 44
 
    </script>
 
