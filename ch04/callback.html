@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+
+   <script>
+      var arr = [13,34,54,5];
+
+      arr.forEach(function(v,i,a){
+         console.log("v:"+v);
+      });
+
+      arr.forEach(function(v,i,a){
+         console.log("i:"+i);
+      })
+
+      arr.forEach(function(v,i,a){
+         console.log("a:"+a);
+      })
+
+      var entries = [];
+      arr.forEach(function(v,i){
+         entries.push([i,v,this[i]]);
+      }, [10,20,30,40,20,30,89]);
+
+      console.log(entries);
+
+      /*
+      setInterval(function(){
+         console.log('1초마다 실행');
+      }, 1000);*/
+      console.log("---------------");
+      var arr2 = [1,2,3,4];
+      var entries = [];
+      arr2.forEach(function(v,i,a){
+         entries.push(v,i,this[i])
+      },[10,20,30,40]);
+      console.log(entries);
+
+      window.onload = function(){
+         document.body.innerHTML = '<div id="a">abc</div>';
+         function cbFunc(x){
+            console.log(this,x);
+         }
+
+         document.getElementById('a').addEventListener('click',cbFunc);
+   
+         document.body.innerHtml = '<div id="a">abc</div>';
+
+         function cbFunc2(x){
+            console.log(this,"x:"+x);
+         }
+
+         document.getElementById('a').addEventListener('click',cbFunc2);
+      }
+   </script>
+</head>
+<body>
+   
+</body>
+</html>
