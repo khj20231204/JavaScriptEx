@@ -39,22 +39,22 @@
       },[10,20,30,40]);
       console.log(entries);
 
-      window.onload = function(){
-         document.body.innerHTML = '<div id="a">abc</div>';
-         function cbFunc(x){
+      window.onload= function(){
+
+         var obj = {
+         name : 'john',
+         age : 22
+         }
+
+         document.body.innerHTML = '<div id="a">click here!</div>';
+         document.getElementById('a').addEventListener('click',func.bind(obj));
+
+         function func(x){
             console.log(this,x);
          }
-
-         document.getElementById('a').addEventListener('click',cbFunc);
-   
-         document.body.innerHtml = '<div id="a">abc</div>';
-
-         function cbFunc2(x){
-            console.log(this,"x:"+x);
-         }
-
-         document.getElementById('a').addEventListener('click',cbFunc2);
       }
+
+      
    </script>
 </head>
 <body>

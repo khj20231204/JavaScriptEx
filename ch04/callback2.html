@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+
+   <script>
+
+      var obj = {
+         vals : [1,2,3,4],
+         logValues : function(x,y){
+            if(this.vals){
+               console.log(this.vals, x, y);
+            }else{
+               console.log(this, x,y);
+            }
+         }
+      }
+
+      obj.logValues(11,22); //logValues를 메소드로 호출
+      
+      var arr = [88,99,100];
+      arr.forEach(obj.logValues); //logValues를 콜백함수로 전달
+
+   </script>
+
+</head>
+<body>
+   
+</body>
+</html>
