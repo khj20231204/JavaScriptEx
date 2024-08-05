@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <script>
+
+      var outer = function(){
+         var a = 1;
+
+         var inner = function(){
+            console.log("inner함수 a:"+a);
+            a++;
+            return a;
+         };
+
+         console.log("outer함수 a:"+a);
+         return inner();
+      }
+
+      var outer2 = outer(); //outer의 return값만 outer2에 담긴다.
+
+      console.log(outer2);
+      console.log(outer2);
+      
+      function user(_name){
+         var _logged = true;
+
+         return{
+            get name() { return _name},
+            set name(v) { _name = v},
+            login() { _logged = true},
+            logout() { _logged = false},
+            get status(){
+               return _logged ? 'login' : 'logout';
+            },
+         }
+      }
+
+      var roy = user('kkk')
+      console.log(roy.status)
+      roy.logout();
+      console.log(roy.name)
+      roy.name = 'aaa';
+      console.log(roy.name)
+      console.log(roy.status)
+   </script>
+</head>
+<body>
+   
+</body>
+</html>
