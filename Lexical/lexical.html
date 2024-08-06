@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+
+   <script>
+
+      function f(){
+         var a = 22;
+         function g(){
+            console.log(a);
+         }
+
+         g();
+      }
+
+     
+
+      function h(){
+         var a = 10;
+         g();
+      }
+
+      function g(){
+         console.log(a);
+      }
+
+      console.log("f호출");
+      f();
+      console.log("메인에서 h호출");
+      h();
+      
+   </script>
+
+</head>
+<body>
+   
+</body>
+</html>

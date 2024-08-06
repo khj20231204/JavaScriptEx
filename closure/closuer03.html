@@ -17,24 +17,50 @@
          return increaseFunc();
       }
 
-      var v = countFunc();
+      var v = countFunc;
 
       console.log(v());
       console.log(v());
-      console.log(v());
 
-      
-      var count2 = 100;
-      function count2Func(){
-         return count2++;
+      //--------------------------------------
+
+      function countFunc2(){
+         var count = 0;
+
+         function countFunc3(){
+            return count++;
+         }
+
+         return countFunc3; //함수 참조 변수를 리턴
       }
 
-      console.log(count2Func());
-      console.log(count2Func());
-      console.log(count2Func());
+      var v2 = countFunc2();
+      console.log(v2());
+      console.log(v2());
+      console.log(v2());
+
+      function A() {
+         var a = 0;
+         function B() {  //함수B는 함수A의 중첩함수기 때문에
+            
+            return a++;
+         }
+
+         return B; //함수B 자체를 리턴, 함수B의 참조 값을 리턴
+         //반환된 함수B는 클로져를 형성하여 A의 스코프에 접근할 수 있다.
+      }
+
+      var v = A(); //A함수를 호출, 함수B를 받음
+      //변수 v가 함수B가 됨
+
+      console.log(v()); //함수 B호출
+      console.log(v());
+      console.log(v());
+
    </script>
 </head>
 <body>
    
 </body>
 </html>
+
