@@ -7,7 +7,29 @@
 
    <script>
       
+      var evens = new Array(1,2,3,4);
+      console.log(evens);
 
+      /*
+      constructor.prototype
+
+      instance[[prototype]]
+      */
+
+      var evens2 = [11,21,31,41];
+      console.log(evens2);
+
+      evens2.forEach(function(v,i,a){
+         console.log(v);
+      });
+
+      console.log([11,21,31,41]);
+
+      console.log([11,21,31,41].constructor)
+      var v = 10;
+      var v2 = "sss";
+      
+      console.log(v.toFixed(2));
    </script>
 
 </head>

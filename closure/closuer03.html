@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <script>
+      
+      
+      function countFunc(){
+         var count = 0;
+            
+         function increaseFunc(){
+            return count++;
+         }
+
+         return increaseFunc();
+      }
+
+      console.log(countFunc());
+      console.log(countFunc());
+      console.log(countFunc());
+
+      var count2 = 100;
+      function count2Func(){
+         return count2++;
+      }
+
+      console.log(count2Func());
+      console.log(count2Func());
+      console.log(count2Func());
+   </script>
+</head>
+<body>
+   
+</body>
+</html>

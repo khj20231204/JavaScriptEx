@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <script>
+
+      var a = 100;
+      var outer = function(){
+         // a = 1;
+
+         var inner = function(){
+            return ++a;
+         };
+
+         return inner();
+      }
+
+      var outer2 = outer();
+      console.log(outer2);
+      console.log("--------------------")
+      console.log(outer2);
+
+   </script>
+</head>
+<body>
+   
+</body>
+</html>
