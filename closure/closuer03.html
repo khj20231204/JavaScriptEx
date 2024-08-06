@@ -17,10 +17,13 @@
          return increaseFunc();
       }
 
-      console.log(countFunc());
-      console.log(countFunc());
-      console.log(countFunc());
+      var v = countFunc();
 
+      console.log(v());
+      console.log(v());
+      console.log(v());
+
+      
       var count2 = 100;
       function count2Func(){
          return count2++;
