@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+
+   <script>
+
+      function Person(name, age){
+         var _name = name;
+         var _age = age;
+
+         return {
+            getName : function() {return _name;},
+            getAge : function() {return _age},
+            setAge : function(x) { _age = x; }
+         };
+      }
+
+      var person = Person("peter", 19);
+      console.log(person.getName);
+      console.log(person.getAge)
+
+      function multiplier(x){
+         return function(y){
+            return (x*y);
+         };
+      }
+
+      var multi = multiplier(3);
+      console.log(multi(10));
+
+   </script>
+
+</head>
+<body>
+   
+</body>
+</html>

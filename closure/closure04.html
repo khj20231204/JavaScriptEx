@@ -10,18 +10,47 @@
       function makeCounter(){
          var count = 0;
 
-         return f;
+         return f; //함수f 자체
 
          function f(){
             return count++;
          }
       }
 
-      var counter = makeCounter(); //호출 결과 return값
-      var counter2 = makeCounter; //함수 참조
-      console.log(counter());
-      console.log(counter());
-      console.log(counter());
+      var counter = makeCounter(); //호출 결과 return값, 함수f 자체를 리턴
+      var counter2 = makeCounter; //함수makeCounter자체를 참조
+      
+      console.log(counter()); //makeCounter()함수의 호출 결과값 함수f를 호출
+      //0
+
+      console.log(counter()); 
+      //1
+
+      console.log(counter);   //makeCounter()호출한 결과 값으로 받은 함수f 자체
+      /*
+      ƒ f(){
+            return count++;
+         }
+      */
+
+      console.log(counter2()); //makeCounter함수 자체를 변수 counter2에 대입, counter2호출
+      /*
+      ƒ f(){
+            return count++;
+         }
+      */
+
+      console.log(counter2);  //makeConter함수 자체 출력
+      /*
+      ƒ makeCounter(){
+         var count = 0;
+
+         return f; 
+
+         function f(){
+            return count++;
+         }
+      }*/
    </script>
 
 </head>

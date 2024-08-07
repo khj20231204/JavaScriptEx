@@ -21,6 +21,55 @@
       console.log(roy2);               //undefined
       console.log(window.name, window.age);  //doll2 44
 
+      var obj = {
+         suit : "하트",
+         rank : "A",
+         func : function(){
+            return console.log(this.suit, this.rank)
+         }
+      }
+
+      obj.func();
+
+      function Card(suit, rank){
+         this.suit = suit,
+         this.rank = rank;
+         this.func = function(){
+
+         }
+      }
+
+      var c = new Card("하트", "A");
+      console.log(c.suit)
+
+      function F(){}
+      console.log(F.prototype)
+
+      F.prototype.prop = "prototype value";
+      
+      var obj2 = new F();
+      console.log(obj2.prop)
+      var obj3 = new F();
+      console.log(obj3.prop)
+
+      function Circle(center, radius){
+         this.center = center;
+         this.radius = radius;
+      }
+
+      Circle.prototype.aa = function(){
+         console.log("prototype center:"+this.center + " ,radius:"+this.radius)
+      }
+
+      var c1 = new Circle(23,43)
+      c1.aa();
+
+      var a = new Array(1,2,3,4);
+      var a2 = [4,5,46,9]
+      console.log(a2.constructor)
+      console.log(Array.prototype.constructor);
+      //console.log([1,2,3].[[prototype]].constructor)
+      console.log([4,5,23].constructor)
    </script>
 
 </head>
