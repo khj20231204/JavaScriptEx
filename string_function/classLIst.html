@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+<body>
+   <p id="p1">p1</p>
+   <div class="class1">div1</div>
+   <span class="class1">span1</span>
+
+   <script>
+
+      var obj = document.querySelector(".class1");
+      obj.classList.remove('class1');
+
+      //예제1)--------------------
+      const data = [
+         { id: 1, class: 'active' },
+         { id: 2, class: '' },
+         // ...
+      ];
+
+      data.forEach(item => {
+         const element = document.getElementById(item.id);
+         element.classList.add(item.class);
+      });
+
+      //예제2)--------------------
+      element = document.querySelector('.myElement');
+
+      // 특정 조건 (예: window 크기)에 따라 클래스 추가/삭제
+      window.addEventListener('resize', () => {
+      if (window.innerWidth < 768) {
+         element.classList.add('mobile');
+      } else {
+         element.classList.remove('mobile');
+      }
+      });
+
+      //예제4)---------------------
+      const checkbox = document.querySelector('#myCheckbox');
+      element = document.querySelector('.myElement');
+
+      checkbox.addEventListener('change', () => {
+      if (checkbox.checked) {
+         element.classList.add('checked');
+      } else {
+         element.classList.remove('checked');
+      }
+      });
+
+      //예제5)-----------------------
+      const button = document.querySelector('.myButton');
+      const element = document.querySelector('.myElement');
+
+      button.addEventListener('click', () => {
+      element.classList.toggle('active');
+      });
+
+   </script>
+</body>
+</html>
