@@ -6,17 +6,15 @@
    <title>Document</title>
    <script>
 
-      const data = [
-         {id : 1 , class : 'active'},
-         {id : 2 , class : ' '}
+      const arr = [
+         {id : 1, class : 'active'},
+         {id : 2, class : ' '}
       ];
 
-      data.forEach(i => {
-         console.log(i.id + " ," + i.class);
-         const element = document.getElementById(i.id);
-         element.classList.add(i.class)
-      })
-
+      arr.forEach(i => {
+         console.log(i.id);
+         var o = document.getElementById(i.id);
+      });
       //----------------------------------------------
       element = document.querySelector('.myElement');
       window.addEventListe
