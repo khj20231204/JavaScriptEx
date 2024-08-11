@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+
+</head>
+<body>
+   <p id="first" style="color:blue;background-color: yellow;" onclick="this.style.color='tea'">
+      <span style="color:red">innerHTML 문장임닥</span>
+   </p>
+
+   <script>
+      var obj = document.getElementById("first");
+      console.log(obj);
+
+      console.log(obj.id);
+      console.log(obj.style.color);
+      console.log(obj.style.backgroundColor);
+      console.log(obj.onclick)
+      console.log(obj.innerHTML)
+      console.log(obj.innerText);
+      console.log(obj.childElementCount);
+   </script>
+</body>
+</html>

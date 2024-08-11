@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+
+   <style>
+      #p2{
+         color:blue;
+         font-size:18px;
+         background-color: yellow;
+      }
+
+   </style>
+
+</head>
+<body>
+   <p id="p1" style="color:red;background-color:lightblue;font-size:20px">인라인 스타일</p>
+   <p id="p2">셀렉터 스타일</p>
+   <script>
+      //인라인 스타일 가져오기
+      var obj = document.getElementById("p1");
+      console.log(obj.style.color)           //red
+      console.log(obj.style.backgroundColor) //lightblue
+      console.log(obj.style.fontSize)        //20px
+      
+      //셀렉터 스타일 가져오기
+      var obj2 = document.getElementById("p2");
+      console.log(obj2.style.color)           //<empty string>
+      console.log(obj2.style.backgroundColor) //<empty string>
+      console.log(obj2.style.fontSize)        //<empty string>
+      /* 셀렉터로 설정한 스타일은 geElementById로 못 가져옵니다.*/
+
+      var obj2Style = window.getComputedStyle(obj2);
+      console.log(obj2Style.color)              //rgb(0, 0, 255)
+      console.log(obj2Style.backgroundColor)    //rgb(255, 255, 0)
+      console.log(obj2Style.fontSize);          //18px
+
+      obj2.style.backgroundColor = "gray";
+      obj2.style.color = "yellow";
+      obj2.style.fontSize = "25px";
+   </script>
+</body>
+</html>

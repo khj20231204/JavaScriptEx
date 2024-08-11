@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+<body>
+   <span id="mySpan"></span>
+
+   <script>
+      //div객체 생성
+      var newDiv = document.createElement("div");  //div요소 생성
+      newDiv.setAttribute('id','myDiv');           //id속성 생성
+      newDiv.style.backgroundColor = 'yellow';       //배경색 설정
+      newDiv.innerHTML = 'newDiv';                 //innerHTML 입력
+      //이벤트를 넣어서 클릭시 자신을 제거 removeChild이용
+      newDiv.addEventListener('click',
+         function(){
+            var p = this.parentElement;
+            p.removeChild(this);
+         }
+      );
+
+       var myspan = document.getElementById("mySpan");
+       myspan.appendChild(newDiv);
+   </script>
+</body>
+</html>

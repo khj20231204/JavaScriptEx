@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+
+   <script>
+     
+
+   </script>
+</head>
+<body>
+   <p id="firstP">
+      <span onclick="changeText()">클릭!</span>
+   </p>
+
+   <script>
+      var firstp = document.getElementById("firstP");
+      console.log(firstp.innerHTML);   //<span>클릭!</span>
+      console.log(firstp.innerText);   //클릭!
+
+      function changeText(){
+         firstp.innerText = "클릭 했습니다!";
+         //firstp.innerHTML = "<span>확인!</span>";
+         
+      }     
+   </script>
+
+<p id="myParagraph">이곳에 내용이 변경됩니다.</p>
+
+<script>
+const paragraph = document.getElementById('myParagraph');
+paragraph.innerText = "새로운 텍스트로 변경되었습니다!";
+</script>
+</body>
+</html>

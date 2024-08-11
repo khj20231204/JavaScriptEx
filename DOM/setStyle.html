@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+
+   <style>
+      #myP2{
+         font-size: 9px;
+         font-weight: bold;
+         color: aqua;
+         background-color: chartreuse;
+         display: block;
+         border: 1px solid red;
+      }
+   </style>
+
+</head>
+<body>
+   
+   <p id="myP" style="font-size:9px;font-weight: bold;color:aqua;background-color: chartreuse;display: block;border:1px solid red;">인라인 방식의 CSS3스타일</p>
+   display를 인라인으로 변경
+   
+   <p id="myP2">셀렉터 방식의 CSS2스타일</p>
+   <script>
+      /* 인라인 방식으로 설정된 style값 변경 */
+      var myp = document.getElementById("myP");
+      myp.style.fontSize = "12px"
+      myp.style.fontWeight = "bold";
+      myp.style.color = "red";
+      myp.style.backgroundColor = "yellow";
+      myp.style.display = "inline";
+      myp.style.border = "3px dotted blue";
+
+      /* 셀렉터 방식으로 설정된 style값 변경 */
+      var myp2 = document.getElementById("myP2");
+      myp2.style.fontSize = "12px"
+      myp2.style.fontWeight = "bold";
+      myp2.style.color = "red";
+      myp2.style.backgroundColor = "yellow";
+      myp2.style.display = "inline";
+      myp2.style.border = "3px dotted blue";
+   </script>
+
+   
+</body>
+</html>
