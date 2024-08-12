@@ -18,9 +18,9 @@
    <p id="p">마우스를 올리면 orchid 색으로 변경</p>
    <script>
 
-         var p = document.getElementById("p");
-         p.onmouseover = over; //over()가 아니라 함수이름 over만 입력!
-
+      var p = document.getElementById("p");
+      p.onmouseover = over; //over()가 아니라 함수이름 over만 입력!
+      p.addEventListener("mouseover", over)
       function over(){
          p.style.backgroundColor = 'orchid';
       }
