@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+<body>
+   <button onclick="f(event)">버튼클릭</button>
+   <input type='checkbox' onclick='return false'>체크 박스
+   <a href="http://www.naver.com" onclick="event.preventDefault()">이동 안되는 링크</a>
+
+   <a href="http://www.naver.com>" onclick="noAction(event)">네이버</a>
+   <script>
+      function noAction(e){
+         e.preventDefault();
+      }
+   </script>
+
+   <script>
+      function f(e){
+         var str = "type:"+ e.type + " ,target:"+e.target
+                  + " ,currentTarget:" + e.currentTarget
+                  + " ,defaultPrevented:" + e.defaultPrevented;
+
+         console.log(str);
+      }
+   </script>
+</body>
+</html>
