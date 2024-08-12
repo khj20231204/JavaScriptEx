@@ -7,36 +7,23 @@
 
    <script>
 
-      /**
-       * 1)HTML요소의 속성으로 등록
-       * DOM요소의 프로퍼티로 등록
-       * addEventListener 메서드를 사용
-       */
-      
-       function func(){
-         var d = new Date();
-         console.log(d);
-      }
-
-      /**
-       * 2)DOM을 사용하여 이벤트 처리 등록 
-       */
-      window.onload = function(){
-         var a = document.getElementById('test');
-         a.style.color = "red";
-
-         var btn = document.getElementById("button1");
-         btn.onclick = function(){ //외부에서 호출은 안되고 내부에서 선언은 가능
-            var d = new Date();
-            console.log(d);
-         };
+      function init(){
+         
       }
 
    </script>
+
 </head>
-<body>
-   <button onclick="func()">버튼</button>
-   <button id="button1">버튼1</button>
-   <p id = "test">hello</p>
+<body onload="init()">
+   <p id="p">마우스를 올리면 orchid 색으로 변경</p>
+   <script>
+
+         var p = document.getElementById("p");
+         p.onmouseover = over; //over()가 아니라 함수이름 over만 입력!
+
+      function over(){
+         p.style.backgroundColor = 'orchid';
+      }
+   </script>
 </body>
 </html>
