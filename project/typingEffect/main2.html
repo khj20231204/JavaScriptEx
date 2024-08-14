@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+   <style>
+
+      * {
+         margin: 0;
+         padding: 0;
+         box-sizing: border-box;
+      }
+
+      .navi{
+         position: absolute;
+         top: 50%;
+         left: 50%;
+         transform: translate(-50%, -50%);
+      }
+
+      .lg-text{
+         font-size: 20px;  
+         font-weight: bold;
+         color: white;
+         margin-bottom: 5px;
+      }
+
+      .sm-text {
+         font-size: 12px;
+         font-weight: bold;
+         color:aliceblue;
+      }
+
+      #dynamic {
+         position: relative;
+      }
+
+      #dynamic::after{
+         content: "";
+         width: 3px;
+         height: 100%;
+         position: absolute;
+         background-color: whitesmoke;
+         top: 0;
+         right: -10px;
+      }
+
+      #dynamic.add::after{
+         display: none;
+      }
+
+   </style>
+</head>
+<body style="background-color: darkslateblue;">
+   <div class="navi">
+      <span class="material-symbols-outlined">
+         hdr_weak
+      </span>
+      <p id="dynamic" class="lg-text">Learn to HTML</p>
+      <p class="sm-text">coding 100</p>
+   </div>
+
+   <script src="main2.js"></script>
+</body>
+</html>
