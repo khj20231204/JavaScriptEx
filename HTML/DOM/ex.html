@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+
+   <style>
+
+      #btn{
+         background-color:aqua;
+      }
+
+   </style>
+
+</head>
+<body>
+   
+   <p id="myp" style="background-Color:green" onmouseover="this.style.backgroundColor='blue'" onclick="alert('aa')">here</p>
+   <p onmouseover="this.style.backgroundColor='red'">here2</p>
+
+   <button id="btn" onclick="alert('aa')">button</button>
+
+   <script>
+   
+      var obj = document.getElementById("myp");
+      console.log(obj.style.backgroundColor);
+      console.log(obj.innerText);
+
+      var btn = document.getElementById("btn");
+      var btnObjt = window.getComputedStyle(btn);
+      console.log(btnObjt.background);
+   </script>
+</body>
+</html>
