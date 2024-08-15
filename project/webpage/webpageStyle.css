@@ -17,11 +17,69 @@
 }
 
 .container .header{
-   width: 80%;
+   width: 80%; /* container의 80% */
    height: 80px;
    margin: 0 auto;
-   /* margin-left: auto; */
-   /* margin-right: auto; */
+   display: flex;
+   justify-content: space-between;
+   align-items: center; /* height 80px를 기준으로 세로 가운데 정렬 */
 }
 
+.container .header h1 a{
+   text-decoration: none;
+   color:white;
+   font-family: abster;
+}
 
+.container .nav ul li{
+   display: inline-block; /* ul li를 가로 정렬 */
+   margin: 0 10px;
+}
+
+.container .nav ul li a{
+   text-decoration: none; 
+   color: white;
+}
+
+.container .nav ul li a:hover{
+   color:#d3d3f3;
+}
+
+.container .hero{
+   position: absolute;
+   left: 50%;
+   top: 50%;
+   transform: translate(-50%, -50%);
+   color: white;
+   text-align: center;
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.container .hero h2 {
+   font-size: 40px;
+   margin: 10px;
+}
+
+.container .hero p {
+   font-size: 15px;
+   padding-bottom: 15px;
+}
+
+.container .hero button{
+   /* background-color: none; */
+   background: none;
+   border: 2px solid darkseagreen;
+   cursor: pointer;
+   color: white;
+   pad: 15px 20px;
+   border-radius: 20px;
+   width: 140px;
+   height: 30px;
+   outline: none;
+   transition: all .4s;
+}
+
+.container .hero button:hover{
+   background-color: darkslategray;
+   color:white;
+}

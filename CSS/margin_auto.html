@@ -6,14 +6,25 @@
    <title>Document</title>
 
    <style>
-      .auto {
-         margin: 0 auto;
+      .parent {
+         width: 60%; /* body 60% */
+         height: 100vh;
+         margin: 0 auto; /* body를 기준으로 가운데 정렬 */
+         background-color: red;
+      }
+      .child {
+         width:80%; /* parent 크기의 80%*/
+         height: 100%;
+         margin: 0 auto; /* parent를 기준으로 가운데 정렬 */
+         background-color: blue;
       }
    </style>
 </head>
 <body>
-   <div class="auto">
-      <span>margin auto</span>
+   <div class="parent">
+      <div class="child">
+         
+      </div>
    </div>   
 </body>
 </html>
