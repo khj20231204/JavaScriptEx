@@ -1,0 +1,81 @@
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+body {
+   background-color: #1f1f1f;
+   display: flex;
+
+   /* 가운데 정렬 */
+   justify-content: center;
+   align-items: center;
+   height: 100vh;
+}
+
+/* form이 아니라 div에 색상을 적용해야 색이 나온다 */
+.calcurator {
+   border:1px solid #333;
+   background-color: #ccc;
+   padding: 5px;
+   width: 287px;
+   /* 전체 width 계산하여 할당 */
+
+   /*
+   이렇게 해도 가운데 오긴오는데 여기선 flex이용
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   */
+}
+
+/* 
+grid로 버튼 정렬
+grid는 부모 요소에 적용해서 자식 요소를 배치하는 방식
+버튼들의 부모 요소가 form이기 때문에 form에서 display:grid를 적용
+grid-gap : 버튼 사이 여백지정
+*/
+.calcurator form {
+   display: grid;
+   grid-template-columns: repeat(4,65px); /* 가로 65px기 때문에 */
+   /* column 한개당 가로 넓이 65px */
+   grid-auto-rows: 65px;                  /* column 한개당 세로도 65px */
+   grid-gap: 5px;
+}
+
+.calcurator form input {
+   border: 1px solid #333;
+   cursor: pointer;
+   font-size: 18px;
+}
+
+/* 버튼 위로 손가락 이동시 음영 발생 */
+.calcurator form input:hover{
+   box-shadow: 1px 1px 2px #333;
+}
+
+.calcurator form .clear{
+   background-color: #ed4848;
+   grid-column: span 3;
+}
+
+.calcurator form .operator {
+   background-color: orange;
+}
+
+.calcurator form .dot {
+   background-color: green;
+}
+
+.calcurator form input[type='text']{
+   grid-column: span 4;
+   text-align: right;
+   padding:0 10px;
+}
+
+.calcurator form .result {
+   grid-column:span 2;
+}
+
