@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <style>
+
+      *{
+         margin: 0;
+         padding: 0;
+      }
+
+      #container{
+         width: 600px;
+         height: 200px;
+         background-color: red;
+         /* position: absolute; child의 부모 */
+         /* position: relative; child의 부모 */
+         
+
+         top: 20%;
+         left: 30%;
+         /* margin-top: -125px;
+         margin-left: -100px; */
+      }
+
+      .child {
+         width: 300px;
+         height: 100px;
+         background-color: blue;
+         position: absolute;
+         top: 50%;
+         left: 50%;
+         margin-top: -50px;
+         margin-left: -150px;
+      }
+
+
+   </style>
+</head>
+<body>
+   <div id="container">
+      <h1 class="child">요소의 중앙 배치</h1>
+  </div>
+</body>
+</html>
