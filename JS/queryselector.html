@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+<body>
+   <div>divTag</div>
+   <canvas>canvasTag</canvas>
+   <button>buttonTag</button>
+   <div id="divid">divId</div>
+   <div class="divclass">divClass</div>
+   <div>
+      <p>p1</p>
+      <p>p2</p>
+      <p>p3</p>
+   </div>
+
+   <script>
+      var v1 = document.querySelector("div");
+      console.log(v1.innerText); //divTag
+
+      var v2 = document.querySelector("canvas");
+      console.log(v2.innerHTML); //canvasTag
+
+      var v4 = document.querySelector("button");
+      console.log(v4.innerText); //buttonTag
+
+      var v5 = document.querySelector("#divid");
+      console.log(v5.innerText); //divId
+
+      var v6 = document.querySelector(".divclass");
+      console.log(v6.innerText); //divClass
+
+      var v7 = document.querySelector('div > p');
+      console.log(v7.innerText); //p1
+
+      var v8 = document.querySelector('div p');
+      console.log(v8.innerText); //p1
+   </script>
+</body>
+</body>
+</html>
