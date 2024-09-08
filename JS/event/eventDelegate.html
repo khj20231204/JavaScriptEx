@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <style>
+
+      div {
+         background-color: green;
+      }
+
+      input {
+         background-color: yellow;
+      }
+
+      body {
+         background-color: gray;
+      }
+
+   </style>
+</head>
+<body>
+   <div id="box">
+      <input id="txt" />
+   </div>
+
+   <script>
+      const box = document.getElementById("box");
+      const txt = document.getElementById("txt");
+
+      document.body.addEventListener('focusin',() => {
+         console.log("focusin - 1. body");
+      })
+
+      box.addEventListener("focusin", () => {
+         console.log("focusin - 2. div");
+      })
+
+      txt.addEventListener("focusin", () => {
+         console.log("focusin - 3. input");
+      })
+
+      document.body.addEventListener('focusout', () => {
+         console.log("focusout - 1. body")
+      })
+
+      box.addEventListener("focusout", () => {
+         console.log("focusout - 2. box")
+      })
+
+      txt.addEventListener("focusout", () => {
+         console.log("focusout - 3. input");
+      })
+   </script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<style>
+   .container {
+      position: relative; /* 부모로 설정 */
+      background-color: antiquewhite;
+   }
+
+   .child {
+      position: absolute; /* 자신의 위치를 absolute로 */
+
+      top: 30%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+   }
+</style>
+
+<div class="container">
+   <h1 class="no-child">요소의 중앙 배치</h1>
+   <h1 class="child">요소의 중앙 배치</h1>
+   <h1 class="no-child">요소의 중앙 배치</h1>
+</div>
