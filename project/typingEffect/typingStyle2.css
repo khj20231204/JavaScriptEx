@@ -1,0 +1,28 @@
+* {
+   margin : 0;
+   padding : 0;
+   box-sizing: border-box;
+}
+
+.wrap {
+   position : absolute;
+   top: 50%;
+   left: 50%;
+   transform : translate(-50%, -50%);
+}
+
+.lg-text {
+   margin : 10px;
+   font-size: 80px;
+}
+
+.sm-text {
+  font-family: "Saira", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+
+    margin: 10px;
+}
