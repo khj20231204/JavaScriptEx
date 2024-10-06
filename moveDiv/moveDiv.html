@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script src="moveDivSource.js" type="text/javascript"></script>
+
+<style>
+
+div.abs {background-color:green; top:80px; width:40px; position:absolute; height:40px; left:30px;} 
+/* position absolute 해줘야된다 */
+
+</style>
+
+<script>
+
+$(function(){
+	init();//function 안에서만 실행
+	
+	var arryInterval = [];
+	var MAX = 100;
+	var count = 1;
+	$("button[id=btnStart]").click(function(){
+		
+		$(".abs").each(function(index){
+			//console.log(index);
+			arryInterval[index] = setInterval(function(){
+				var obj = $(".abs:eq("+index+")");
+				//console.log("index:"+index);
+				var leftValue = obj.offset().left;
+				console.log(Math.random());
+				
+				obj.offset({
+					"left" : leftValue + (Math.random()*10)
+				});
+				
+				if(obj.offset().left > MAX){
+					
+					clearInterval(arryInterval[index]);
+					
+					obj.offset({
+						"left" : MAX
+					});
+					
+					obj.text(count++);
+					obj.css("color","white");
+					obj.css("background","blue");
+				}
+				
+			},100);		
+		});
+	});
+	
+	
+	$("button[id=btnStop]").click(function(){
+		$(".abs").each(function(index){
+			
+			clearInterval(arryInterval[index]);
+			console.log(index);
+		});
+	});
+	
+	
+});
+	
+</script>
+</head>
+<body>
+
+<button id="btnStart">start</button>
+<button id="btnStop">stop</button>
+<div id="two" class="abs"></div>
+</body>
+</html>
